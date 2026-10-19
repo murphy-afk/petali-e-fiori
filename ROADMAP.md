@@ -431,6 +431,9 @@ Deliverables: API running locally, endpoints documented in README, tests green.
 
 Acceptance: every endpoint returns correct JSON, invalid contact submissions are rejected.
 
+Status: complete. 18 API tests green on MySQL 8.4 (`npm test`), README documents every
+endpoint and the canonical site routes.
+
 ### Session 3: Design system and React shell
 
 Goal: the visual language of section 4 implemented in custom CSS, plus the app shell.
