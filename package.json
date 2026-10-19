@@ -8,6 +8,7 @@
     "build": "npm run build --prefix client",
     "start": "npm run start --prefix server",
     "seed": "node scripts/seed.mjs",
+    "test": "npm test --prefix server",
     "images": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/export-images.ps1"
   },
   "engines": {
