@@ -16,6 +16,8 @@ These rules apply to every file you create or edit.
 4. Never commit without permission. Do not run git commit, git push, git tag or any other command
    that records history until the user explicitly allows it. Prepare the changes, then ask and
    wait for a clear yes.
+5. Never put the session number in a commit message. Describe what actually changed, for example
+   "Add contact form validation and rate limit".
 
 Any file that breaks one of these rules must be fixed before you move on.
 
