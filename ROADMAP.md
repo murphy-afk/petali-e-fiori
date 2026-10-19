@@ -411,11 +411,10 @@ Tasks:
 Deliverables: schema loads without errors, seed loads without errors, tables contain the research.
 
 Acceptance: a fresh MySQL import of schema.sql followed by seed.sql and seed_gallery.sql returns
-the full content: 29 settings, 5 pages, 8 services, 8 bouquets, 13 decorations, 9 price examples,
+the full content: 30 settings, 5 pages, 8 services, 8 bouquets, 13 decorations, 9 price examples,
 1 partner and 80 gallery images.
 
-Status: all files written, static checks passed, committed. The database import is the only open
-item: put your MySQL password in `.env` (DB_PASSWORD) and run `npm run seed`.
+Status: complete. Import verified against the acceptance list on MySQL 8.4 with `npm run seed`.
 
 ### Session 2: Express API and SEO infrastructure
 
