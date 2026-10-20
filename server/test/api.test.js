@@ -5,6 +5,7 @@ import { after, before, test } from "node:test";
 import assert from "node:assert/strict";
 import { once } from "node:events";
 import { createApp } from "../src/app.js";
+import { config } from "../src/config.js";
 import { query, closePool } from "../src/db.js";
 
 const CONTACT_EMAIL = "test-api@example.it";
@@ -297,10 +298,10 @@ test("sitemap lists every published route", async () => {
   assert.ok(res.headers.get("content-type").includes("application/xml"));
   assert.ok(xml.includes("<?xml version="));
   assert.ok(xml.includes("</urlset>"));
-  assert.ok(xml.includes("<loc>https://www.petaliefiori.it/</loc>"));
-  assert.ok(xml.includes("<loc>https://www.petaliefiori.it/chi-siamo</loc>"));
-  assert.ok(xml.includes("<loc>https://www.petaliefiori.it/chiesa</loc>"));
-  assert.ok(xml.includes("<loc>https://www.petaliefiori.it/gallery</loc>"));
+  assert.ok(xml.includes("<loc>" + config.siteUrl + "/</loc>"));
+  assert.ok(xml.includes("<loc>" + config.siteUrl + "/chi-siamo</loc>"));
+  assert.ok(xml.includes("<loc>" + config.siteUrl + "/chiesa</loc>"));
+  assert.ok(xml.includes("<loc>" + config.siteUrl + "/gallery</loc>"));
   const urlCount = (xml.match(/<loc>/g) || []).length;
   assert.equal(urlCount, 1 + 5 + 8 + 1);
 });
@@ -311,5 +312,5 @@ test("robots points at the sitemap", async () => {
   assert.equal(res.status, 200);
   assert.ok(text.includes("User-agent: *"));
   assert.ok(text.includes("Allow: /"));
-  assert.ok(text.includes("Sitemap: https://www.petaliefiori.it/sitemap.xml"));
+  assert.ok(text.includes("Sitemap: " + config.siteUrl + "/sitemap.xml"));
 });
