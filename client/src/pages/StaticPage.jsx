@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import PageHeader from "../components/PageHeader.jsx";
 import ContactForm from "../components/ContactForm.jsx";
+import MapEmbed from "../components/MapEmbed.jsx";
+import PriceTable from "../components/PriceTable.jsx";
+import RelatedLinks from "../components/RelatedLinks.jsx";
 import ContentPage from "./ContentPage.jsx";
 import { api } from "../api/client.js";
 import { useSettings } from "../context/SettingsContext.jsx";
-import { pageBySlug } from "../routes.js";
+import { pageBySlug, relatedLinks } from "../routes.js";
 import { useAsync } from "../utils/useAsync.js";
 import { useDocumentMeta } from "../utils/useDocumentMeta.js";
 import "./StaticPage.css";
@@ -14,7 +17,8 @@ function telHref(phone) {
 }
 
 // Static page: chi siamo, dove siamo, preventivi, progetti virtuali and
-// contatti. The text comes from the pages table, the contact page also gets
+// contatti. The text comes from the pages table, preventivi also lists the
+// real price examples, dove siamo shows the map of the shop and contatti gets
 // the form wired to POST /api/contact.
 export default function StaticPage({ slug }) {
   const route = pageBySlug(slug) || { path: "/" + slug, label: slug };
@@ -70,9 +74,27 @@ export default function StaticPage({ slug }) {
         </section>
       ) : null}
 
+      {/* The old site showed a static map of the block as the page photo, the
+          interactive map below replaces it. The photo stays in the gallery. */}
       {page && !isContact ? (
-        <ContentPage title={route.label} body={page.body} heroImage={page.hero_image} />
+        <ContentPage
+          title={route.label}
+          body={page.body}
+          heroImage={slug === "dove-siamo" ? null : page.hero_image} />
       ) : null}
+
+      {slug === "preventivi" ? <PriceTable /> : null}
+
+      {slug === "dove-siamo" ? (
+        <section className="section section--tight">
+          <div className="container">
+            <h2 className="static-page__map-title">La nostra posizione</h2>
+            <MapEmbed />
+          </div>
+        </section>
+      ) : null}
+
+      <RelatedLinks title="Continua a esplorare" links={relatedLinks(slug)} />
     </>
   );
 }

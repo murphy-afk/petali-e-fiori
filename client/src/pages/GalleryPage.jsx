@@ -1,7 +1,9 @@
 import { useState } from "react";
 import PageHeader from "../components/PageHeader.jsx";
 import Lightbox from "../components/Lightbox.jsx";
+import RelatedLinks from "../components/RelatedLinks.jsx";
 import { api } from "../api/client.js";
+import { galleryRoute, relatedLinks } from "../routes.js";
 import { imageUrl } from "../utils/text.js";
 import { useAsync } from "../utils/useAsync.js";
 import { useDocumentMeta } from "../utils/useDocumentMeta.js";
@@ -31,8 +33,8 @@ export default function GalleryPage() {
   return (
     <>
       <PageHeader
-        breadcrumbs={[{ path: "/gallery", label: "Gallery" }]}
-        title="Gallery"
+        breadcrumbs={[{ path: galleryRoute.path, label: galleryRoute.label }]}
+        title={galleryRoute.label}
         intro="Le foto dei matrimoni, delle cerimonie e degli eventi che abbiamo allestito." />
 
       <section className="section">
@@ -76,6 +78,8 @@ export default function GalleryPage() {
           onNavigate={setLightboxIndex}
           onClose={() => setLightboxIndex(null)} />
       ) : null}
+
+      <RelatedLinks title="Continua a esplorare" links={relatedLinks(galleryRoute.slug)} />
     </>
   );
 }
