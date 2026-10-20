@@ -1,0 +1,118 @@
+.nav {
+  margin-left: auto;
+}
+
+.nav__toggle {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background-color: transparent;
+  border: 2px solid var(--action-ghost-border);
+  border-radius: var(--radius-sm);
+  color: var(--text-on-header);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+}
+
+.nav__toggle-bars,
+.nav__toggle-bars::before,
+.nav__toggle-bars::after {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+}
+
+.nav__toggle-bars {
+  position: relative;
+}
+
+.nav__toggle-bars::before,
+.nav__toggle-bars::after {
+  position: absolute;
+  left: 0;
+  content: "";
+}
+
+.nav__toggle-bars::before {
+  top: -6px;
+}
+
+.nav__toggle-bars::after {
+  top: 6px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav__link {
+  display: block;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  color: var(--text-on-header);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nav__link:hover {
+  border-bottom-color: var(--color-leaf);
+  color: var(--color-ink);
+}
+
+.nav__link.is-active {
+  border-bottom-color: var(--color-leaf);
+  color: var(--color-ink);
+  font-weight: var(--weight-semibold);
+}
+
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .nav__list {
+    gap: var(--space-3);
+  }
+
+  .nav__link {
+    font-size: var(--text-xs);
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav__toggle {
+    display: inline-flex;
+  }
+
+  .nav__list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: var(--space-2) var(--container-pad) var(--space-5);
+    background-color: var(--surface-header);
+    border-bottom: 2px solid var(--border-strong);
+    box-shadow: var(--shadow-lift);
+  }
+
+  .nav__list.is-open {
+    display: flex;
+  }
+
+  .nav__link {
+    padding-block: var(--space-3);
+    border-bottom: 1px solid rgba(36, 81, 60, 0.25);
+    white-space: normal;
+  }
+}
