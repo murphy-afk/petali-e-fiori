@@ -474,6 +474,15 @@ Deliverables: complete browsing experience with real Italian copy and photos.
 
 Acceptance: no lorem ipsum, no missing images, every route renders from API data.
 
+Status: complete. Every service page now carries its photo strip from the matching gallery
+category plus cross links; bouquet and decorazioni-varie build their own sections from the
+bouquets and decorations tables, which were seeded but never rendered until now. Preventivi
+lists the nine real price examples in a responsive table, Dove siamo replaces the old static
+map with a lazy OpenStreetMap embed geocoded from the shop address, and every inner page,
+gallery included, ends with links to related pages. Checked in headless Edge across 15 routes:
+no lorem ipsum, no broken images, one H1 and no skipped heading levels, no horizontal scroll at
+320, 375, 768 and 1280 px, and every text pair passes WCAG AA.
+
 ### Session 5: Gallery, contact form and interactions
 
 Goal: the two features the old site never delivered.
