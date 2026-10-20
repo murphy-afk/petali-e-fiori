@@ -452,6 +452,12 @@ Deliverables: shell renders with sample data, no framework CSS imported.
 Acceptance: navigation works, all pages have a placeholder, mobile layout has no horizontal
 scroll.
 
+Status: complete. React 18 shell with the design system in custom CSS, every route renders from
+the API, no horizontal scroll from 320px up (checked in headless Edge) and every text pair
+passes WCAG AA. The ContactForm is already wired to POST /api/contact and the Lightbox is used
+by the home and gallery grids, so Session 5 only has to add the category filter, the home
+slideshow, the sticky table of contents and the toast confirmation.
+
 ### Session 4: Main pages with real content
 
 Goal: all pages filled with data from the API.
