@@ -1,0 +1,107 @@
+/* Design tokens: palette, typography, spacing, layout.
+   Every color, font and size used anywhere in the site is defined here, see
+   ROADMAP.md sections 4.2 and 4.3. Contrast of every text pair used in the UI
+   was checked against WCAG AA. */
+
+:root {
+  /* Palette */
+  --color-cream: #fffdf7;
+  --color-butter: #f8fac8;
+  --color-apricot: #fabd6b;
+  --color-apricot-deep: #e08a3c;
+  --color-rose: #e4703a;
+  --color-leaf: #24513c;
+  --color-blush: #f7e7dc;
+  --color-ink: #23201c;
+  --color-white: #ffffff;
+  /* Readable derivatives of the palette, all pass AA on the surfaces they are used on */
+  --color-ink-soft: #625c52;
+  --color-cream-soft: #e8e2d4;
+  /* Burnt apricot, the only warm accent dark enough to be used as text */
+  --color-clay: #9c4e1c;
+
+  /* Surfaces */
+  --surface-page: var(--color-cream);
+  --surface-band: var(--color-butter);
+  --surface-accent: var(--color-blush);
+  --surface-card: var(--color-white);
+  --surface-header: var(--color-apricot);
+  --surface-footer: var(--color-leaf);
+
+  /* Text per surface */
+  --text-on-page: var(--color-ink);
+  --text-on-band: var(--color-leaf);
+  --text-on-accent: var(--color-ink);
+  --text-on-header: var(--color-leaf);
+  --text-on-footer: var(--color-cream);
+  --text-muted: var(--color-ink-soft);
+  --text-muted-on-footer: var(--color-cream-soft);
+  --text-link: var(--color-leaf);
+  --text-accent: var(--color-clay);
+
+  /* Actions */
+  --action-primary-bg: var(--color-leaf);
+  --action-primary-text: var(--color-cream);
+  --action-primary-bg-hover: var(--color-apricot-deep);
+  --action-primary-text-hover: var(--color-ink);
+  --action-accent-bg: var(--color-rose);
+  --action-accent-text: var(--color-ink);
+  --action-accent-bg-hover: var(--color-apricot);
+  --action-ghost-text: var(--color-leaf);
+  --action-ghost-border: var(--color-leaf);
+  --action-ghost-bg-hover: var(--color-blush);
+
+  /* Borders, focus and shadows */
+  --border-soft: var(--color-blush);
+  --border-strong: var(--color-apricot-deep);
+  --focus-ring-color: var(--color-leaf);
+  --focus-ring-color-on-dark: var(--color-apricot);
+  --focus-ring-width: 3px;
+  --focus-ring-offset: 2px;
+  --shadow-soft: 0 10px 30px rgba(35, 32, 28, 0.08);
+  --shadow-lift: 0 16px 36px rgba(35, 32, 28, 0.16);
+
+  /* Typography, 1.25 modular scale on a 16px root */
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5625rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-display: clamp(2.1rem, 1.4rem + 3vw, 3.05rem);
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-body: 1.7;
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --tracking-wide: 0.08em;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Layout */
+  --container-max: 1200px;
+  --container-narrow: 760px;
+  --container-pad: clamp(1rem, 4vw, 2rem);
+  --section-pad: clamp(2.5rem, 6vw, 5rem);
+  --grid-columns: 12;
+  --grid-gap: clamp(1rem, 2.5vw, 2rem);
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 18px;
+  --header-height: 4.5rem;
+  --transition-fast: 160ms ease;
+}

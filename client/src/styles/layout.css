@@ -1,0 +1,78 @@
+/* Layout primitives: page frame, container, sections and the 12 column grid */
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-main {
+  flex: 1 0 auto;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.container--narrow {
+  max-width: var(--container-narrow);
+}
+
+.section {
+  padding-block: var(--section-pad);
+}
+
+.section--band {
+  background-color: var(--surface-band);
+}
+
+.section--accent {
+  background-color: var(--surface-accent);
+}
+
+.section--tight {
+  padding-block: var(--space-7);
+}
+
+/* 12 column grid, every child defaults to a span of 12 on small screens */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), minmax(0, 1fr));
+  gap: var(--grid-gap);
+}
+
+.grid > * {
+  grid-column: span var(--grid-columns);
+  min-width: 0;
+}
+
+/* Card rows that adapt the column count to the available width, the children
+   must not keep the 12 column span of the generic grid */
+.grid--cards {
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+}
+
+.grid--cards > * {
+  grid-column: auto;
+}
+
+@media (min-width: 768px) {
+  .grid .col-4 {
+    grid-column: span 4;
+  }
+
+  .grid .col-6 {
+    grid-column: span 6;
+  }
+
+  .grid .col-8 {
+    grid-column: span 8;
+  }
+
+  .grid .col-12 {
+    grid-column: span var(--grid-columns);
+  }
+}
