@@ -342,8 +342,9 @@ petali-e-fiori/
   taglines, opening text.
 - **pages**: id, slug, meta_title, meta_description, intro, body (long text), hero_image,
   published. One row per static page (chi-siamo, dove-siamo, preventivi, progetti-virtuali).
-- **services**: id, slug, name, summary, body, hero_image, sort_order. Chiesa, comune, bouquet,
-  decorazioni-varie, retromacchina, bottoniere, centrotavola, meeting.
+- **services**: id, slug, name, summary, body, hero_image, hero_images (JSON list of {src, alt}
+  that the page renders as a collage), sort_order. Chiesa, comune, bouquet, decorazioni-varie,
+  retromacchina, bottoniere, centrotavola, meeting.
 - **bouquets**: id, name, style (decorativo, formale, borsetta, gambo-scoperto), description,
   price_min, price_max, image, sort_order.
 - **decorations**: id, name, slug, description, usage, image, sort_order. The 14 types.
@@ -533,6 +534,36 @@ Deliverables: production build running behind Express, README, Lighthouse report
 
 Acceptance: all routes server rendered, sitemap valid, Lighthouse SEO 90+, no console errors,
 mobile friendly.
+
+### Session 7: Hero photos and navigation polish
+
+Goal: replace the photos that betray the quality of the shop shots and take the crowding out of
+the header.
+
+Tasks:
+- Bouquet page: swap the 150x200 hero for the Tiziano bouquet detail already in the gallery.
+- Retromacchina and Decorazioni Varie: show a collage of four photos instead of one stretched
+  hero, stored in the new services.hero_images JSON column and rendered by ContentPage.
+- Header: group the seven wedding services behind a Matrimonio dropdown so the top row holds
+  five items instead of eleven.
+
+Deliverables: the three pages carry their new hero media from the database, the header has a
+dropdown that works with mouse, keyboard and touch.
+
+Acceptance: bouquet, retromacchina and decorazioni-varie show the new photos, the dropdown opens
+and closes with the keyboard and returns focus to its button, the mobile menu still lists every
+link, no horizontal scroll from 375px up.
+
+Status: complete. hero_images is a JSON column next to hero_image, which the home cards keep
+using, and each entry carries its own Italian alt text, so a service with no collage keeps the
+old single photo behaviour. The Matrimonio dropdown is a disclosure button with aria-expanded
+and aria-controls that closes on Escape, on a click outside and when the focus leaves it; under
+1024px the button becomes a heading and the seven services stay visible inside the menu panel.
+Checked in headless Edge on the dev build: the three pages render their photos with no broken
+image and no console error, the collage is one row of four square tiles from 820px up and a 2x2
+grid at 375px, no horizontal scroll at 375, 820 and 1280px, the dropdown follows its links and
+closes itself, and the 404 page still lists every header link. The 18 API tests stay green and
+`npm run seed` imports the schema, the seed and the gallery without errors.
 
 ## 7. Global definition of done
 
