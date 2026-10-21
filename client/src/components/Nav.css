@@ -76,12 +76,115 @@
   font-weight: var(--weight-semibold);
 }
 
+/* Matrimonio group: the wedding services sit behind a dropdown button on a
+   desktop screen and behind a plain heading inside the mobile panel. */
+.nav__item--group {
+  position: relative;
+}
+
+.nav__group-title {
+  display: none;
+}
+
+.nav__group-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 0 0 2px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-on-header);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  white-space: nowrap;
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.nav__group-toggle:hover {
+  border-bottom-color: var(--color-leaf);
+  color: var(--color-ink);
+}
+
+.nav__group-toggle.is-active {
+  border-bottom-color: var(--color-leaf);
+  color: var(--color-ink);
+  font-weight: var(--weight-semibold);
+}
+
+.nav__group-caret {
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: translateY(-2px) rotate(45deg);
+  transition: transform var(--transition-fast);
+}
+
+.nav__group-toggle[aria-expanded="true"] .nav__group-caret {
+  transform: translateY(1px) rotate(-135deg);
+}
+
+.nav__submenu {
+  position: absolute;
+  top: calc(100% + var(--space-3));
+  left: 0;
+  z-index: 1;
+  display: none;
+  flex-direction: column;
+  min-width: 230px;
+  margin: 0;
+  padding: var(--space-2);
+  list-style: none;
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lift);
+}
+
+.nav__submenu.is-open {
+  display: flex;
+}
+
+/* Small arrow that points back to the button which opened the list. */
+.nav__submenu::before {
+  position: absolute;
+  top: -7px;
+  left: var(--space-5);
+  width: 12px;
+  height: 12px;
+  background-color: var(--surface-card);
+  border-top: 1px solid var(--border-soft);
+  border-left: 1px solid var(--border-soft);
+  content: "";
+  transform: rotate(45deg);
+}
+
+.nav__submenu .nav__link {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: none;
+  border-radius: var(--radius-sm);
+}
+
+.nav__submenu .nav__link:hover {
+  background-color: var(--action-ghost-bg-hover);
+  border-bottom-color: transparent;
+  color: var(--text-on-page);
+}
+
+.nav__submenu .nav__link.is-active {
+  background-color: var(--surface-accent);
+  border-bottom-color: transparent;
+  color: var(--text-on-page);
+}
+
 @media (max-width: 1279px) and (min-width: 1024px) {
   .nav__list {
     gap: var(--space-3);
   }
 
-  .nav__link {
+  .nav__link,
+  .nav__group-toggle {
     font-size: var(--text-xs);
   }
 }
@@ -114,5 +217,49 @@
     padding-block: var(--space-3);
     border-bottom: 1px solid rgba(36, 81, 60, 0.25);
     white-space: normal;
+  }
+
+  /* Inside the panel the wedding services are always visible, so the button
+     that drives the desktop dropdown is not rendered and the group becomes a
+     heading over an indented list. */
+  .nav__group-title {
+    display: block;
+    padding: var(--space-3) var(--space-3) var(--space-1);
+    border-bottom: 1px solid rgba(36, 81, 60, 0.25);
+    color: var(--text-on-header);
+    font-size: var(--text-xs);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+  }
+
+  .nav__group-toggle {
+    display: none;
+  }
+
+  .nav__submenu {
+    position: static;
+    display: flex;
+    min-width: 0;
+    padding: var(--space-1) 0 var(--space-2) var(--space-4);
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .nav__submenu::before {
+    content: none;
+  }
+
+  .nav__submenu .nav__link {
+    padding: var(--space-3);
+    border-bottom: 1px solid rgba(36, 81, 60, 0.25);
+    border-radius: var(--radius-sm);
+  }
+
+  .nav__submenu .nav__link:hover,
+  .nav__submenu .nav__link.is-active {
+    border-bottom-color: rgba(36, 81, 60, 0.25);
   }
 }

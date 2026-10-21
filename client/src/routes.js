@@ -100,21 +100,31 @@ export const pageRoutes = [
   },
 ];
 
-// Header navigation: the eight services plus preventivi, gallery and
-// contatti, the shorter labels keep one row on a desktop screen.
+// Header navigation: the seven wedding services grouped behind the Matrimonio
+// dropdown, then the remaining top level links. The shorter labels keep one
+// row on a desktop screen; headerNav may hold groups with children, while
+// headerLinks below is the flat list every link of the header belongs to.
 export const headerNav = [
-  { path: "/chiesa", label: "Chiesa" },
-  { path: "/comune", label: "Comune" },
-  { path: "/bouquet", label: "Bouquet" },
-  { path: "/decorazioni-varie", label: "Decorazioni" },
-  { path: "/retromacchina", label: "Retromacchina" },
-  { path: "/bottoniere", label: "Bottoniere" },
-  { path: "/centrotavola", label: "Centrotavola" },
+  {
+    label: "Matrimonio",
+    children: [
+      { path: "/chiesa", label: "Chiesa" },
+      { path: "/comune", label: "Comune" },
+      { path: "/bouquet", label: "Bouquet" },
+      { path: "/decorazioni-varie", label: "Decorazioni" },
+      { path: "/retromacchina", label: "Retromacchina" },
+      { path: "/bottoniere", label: "Bottoniere" },
+      { path: "/centrotavola", label: "Centrotavola" },
+    ],
+  },
   { path: "/meeting", label: "Meeting" },
   { path: "/preventivi", label: "Preventivi" },
   { path: "/gallery", label: "Gallery" },
   { path: "/contatti", label: "Contatti" },
 ];
+
+// Every header link with no grouping, used where a plain list is wanted.
+export const headerLinks = headerNav.flatMap((item) => item.children || [item]);
 
 // Footer navigation: the rest of the site, as on the old footer.
 export const footerNav = [

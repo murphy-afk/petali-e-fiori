@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Button from "../components/Button.jsx";
 import PageHeader from "../components/PageHeader.jsx";
-import { headerNav, pageRoutes } from "../routes.js";
+import { headerLinks, pageRoutes } from "../routes.js";
 import { useDocumentMeta } from "../utils/useDocumentMeta.js";
 import "./NotFoundPage.css";
 
@@ -9,7 +9,7 @@ import "./NotFoundPage.css";
 export default function NotFoundPage() {
   useDocumentMeta({ title: "Pagina non trovata | Petali e Fiori" });
 
-  const links = [...headerNav, ...pageRoutes].filter(
+  const links = [...headerLinks, ...pageRoutes].filter(
     (item, index, list) => list.findIndex((other) => other.path === item.path) === index
   );
 
