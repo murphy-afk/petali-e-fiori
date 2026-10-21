@@ -18,6 +18,7 @@ These rules apply to every file you create or edit.
    wait for a clear yes.
 5. Never put the session number in a commit message. Describe what actually changed, for example
    "Add contact form validation and rate limit".
+6. Commit messages stay under 12 words. Subject line only, no session number, no emoji.
 
 Any file that breaks one of these rules must be fixed before you move on.
 
