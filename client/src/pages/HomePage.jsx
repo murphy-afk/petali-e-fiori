@@ -4,6 +4,7 @@ import Card from "../components/Card.jsx";
 import Lightbox from "../components/Lightbox.jsx";
 import PriceTag from "../components/PriceTag.jsx";
 import SectionHeading from "../components/SectionHeading.jsx";
+import Slideshow from "../components/Slideshow.jsx";
 import { api } from "../api/client.js";
 import { useSettings } from "../context/SettingsContext.jsx";
 import { useAsync } from "../utils/useAsync.js";
@@ -26,11 +27,13 @@ export default function HomePage() {
 
   useDocumentMeta({ title: settings.brand_name + SITE_TITLE, description: SITE_DESCRIPTION });
 
-  const galleryImages = (gallery.data ? gallery.data.images : []).slice(0, 7).map((image) => ({
+  const homeImages = (gallery.data ? gallery.data.images : []).map((image) => ({
     src: imageUrl(image.file),
     alt: image.alt,
     caption: image.caption,
   }));
+
+  const galleryImages = homeImages.slice(0, 7);
 
   const teaserImages = (priceExamples.data ? priceExamples.data.priceExamples : []).slice(0, 3);
 
@@ -47,11 +50,20 @@ export default function HomePage() {
               <Button to="/gallery" variant="ghost">{settings.cta_gallery}</Button>
             </div>
           </div>
-          <figure className="hero__media">
-            <img
-              src={imageUrl("home/bouquet-manet.jpg")}
-              alt="Bouquet Manet, modello decorativo di Petali e Fiori" />
-          </figure>
+          {/* While the gallery loads the hero keeps one real photo, so the
+              first paint already carries the look of the shop. The slideshow
+              brings its own figure, so only the fallback needs one here. */}
+          {homeImages.length > 0 ? (
+            <div className="hero__media">
+              <Slideshow images={homeImages} label="Foto dei nostri allestimenti" />
+            </div>
+          ) : (
+            <figure className="hero__media">
+              <img
+                src={imageUrl("home/bouquet-manet.jpg")}
+                alt="Bouquet Manet, modello decorativo di Petali e Fiori" />
+            </figure>
+          )}
         </div>
       </section>
 

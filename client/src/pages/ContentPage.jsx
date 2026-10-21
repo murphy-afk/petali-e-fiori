@@ -1,14 +1,16 @@
 import Button from "../components/Button.jsx";
+import TableOfContents from "../components/TableOfContents.jsx";
 import { useSettings } from "../context/SettingsContext.jsx";
-import { imageUrl, splitParagraphs } from "../utils/text.js";
+import { imageUrl, splitSections } from "../utils/text.js";
 import "./ContentPage.css";
 
 // Body of a content page: optional hero photo, the long text split into
-// paragraphs and a sticky quote card on wide screens. ServicePage and
-// StaticPage both render it under their own PageHeader.
+// sections with their headings, a table of contents and a sticky quote card
+// on wide screens. ServicePage and StaticPage both render it under their own
+// PageHeader.
 export default function ContentPage({ title, body, heroImage, children }) {
   const { settings } = useSettings();
-  const paragraphs = splitParagraphs(body);
+  const { intro, sections } = splitSections(body);
 
   return (
     <>
@@ -21,9 +23,21 @@ export default function ContentPage({ title, body, heroImage, children }) {
       <section className="section">
         <div className="container content-page__layout">
           <div className="prose content-page__body">
-            {paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+            <TableOfContents sections={sections} />
+
+            {intro.map((paragraph, index) => (
+              <p key={"intro-" + index}>{paragraph}</p>
             ))}
+
+            {sections.map((section) => (
+              <section key={section.id} aria-labelledby={section.id}>
+                <h2 id={section.id}>{section.title}</h2>
+                {section.paragraphs.map((paragraph, index) => (
+                  <p key={section.id + "-" + index}>{paragraph}</p>
+                ))}
+              </section>
+            ))}
+
             {children}
           </div>
 

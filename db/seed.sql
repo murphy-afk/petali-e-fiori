@@ -59,13 +59,21 @@ VALUES
  'Petali e fiori è uno staff di professionisti che collaborano di volta in volta per progettare, ideare e realizzare il Matrimonio o l''Evento dei Vostri sogni.',
  'Valeria Sciandra, la nostra Flower Designer Diplomata, sarà in grado di creare le composizioni Floreali più adatte al Vostro Evento: insieme a Voi vi proporrà esattamente quello che desideravate e sognavate per il vostro matrimonio. Tutto questo partendo sempre e comunque dal Vostro budget.
 
+## Due modi di lavorare con voi
+
 Petali e fiori può proporvi il tipo di assistenza che Voi preferite. La Nostra Flower Designer può studiare insieme a Voi ogni dettaglio e, punto per punto, seguirVi nelle Vostre scelte per l''Addobbo.
 
 Oppure, se non avete molto tempo a Vostra disposizione, la competenza del nostro staff sarà al Vostro servizio per realizzare un Evento da favola: secondo i Vostri desideri e partendo da una Vostra idea, ma sviluppando l''ideazione dell''Addobbo Floreale in totale autonomia. Vi presenteremo vari Progetti Virtuali fino a quello che più Vi rappresenta ed entusiasma: una volta approvato il Progetto prescelto si darà seguito alla sua realizzazione.
 
+## Il Progetto Virtuale
+
 I Nostri Progetti Virtuali sono sviluppati su un''immagine del Luogo del Vostro Evento; questi progetti sono sviluppati dalla nostra Flower Designer e poi presentati grazie alla computer grafica.
 
+## I nostri Partners
+
 Petali e fiori si avvale della collaborazione di alcuni Partners: Autonoleggio Bellani, www.autonoleggiobellani.com.
+
+## Il nostro obiettivo
 
 Insomma il nostro obiettivo è realizzare i Vostri Sogni!',
  'chi-siamo/candela-rotonda-2.jpg', 1),
@@ -83,11 +91,19 @@ Per qualsiasi informazione potete chiamarci al 02 23167849 oppure al 331 8603337
  'Preventivi | Prezzi degli allestimenti floreali | Petali e Fiori',
  'Esempi reali di preventivi: Bouquet da 90 euro, allestimenti da 299 a 1398 euro. Preventivo e Progetto Virtuale gratuiti, prezzi comprensivi di trasporto e installazione.',
  'L''eleganza non deve essere necessariamente per pochi; e i nostri preventivi ve lo dimostrano. Le Decorazioni Floreali che desiderate per le Vostre nozze possono essere più economiche di quanto pensiate!',
- 'In ogni allestimento i fattori che vanno a incidere principalmente sui costi sono tre: il periodo del Matrimonio, la tipologia di fiori scelta e la loro quantità. Se ci si sposa intorno a San Valentino è meglio non scegliere come fiore principale le rose rosse, perché in quel momento il loro costo è molto elevato. Inoltre esistono fiori che sono sempre più cari di altri, come certe tipologie di orchidee.
+ '## Che cosa influenza il prezzo
+
+In ogni allestimento i fattori che vanno a incidere principalmente sui costi sono tre: il periodo del Matrimonio, la tipologia di fiori scelta e la loro quantità. Se ci si sposa intorno a San Valentino è meglio non scegliere come fiore principale le rose rosse, perché in quel momento il loro costo è molto elevato. Inoltre esistono fiori che sono sempre più cari di altri, come certe tipologie di orchidee.
+
+## Anche solo Bouquet e Bottoniera
 
 Da noi è possibile ordinare anche solamente il Bouquet e la Bottoniera per lo Sposo; in questo caso il prezzo si aggira intorno ai 159 euro, consegna ovviamente inclusa, ma anche meno se il Bouquet è piccolo o con fiori economici.
 
+## Cosa è compreso nel prezzo
+
 I nostri prezzi si intendono comprensivi del trasporto e dell''installazione delle Decorazioni Floreali nel luogo dell''Evento, della consegna del Bouquet della Sposa e delle Bottoniere e del Retromacchina Sposi la mattina stessa del Matrimonio.
+
+## Il preventivo gratuito
 
 Contattateci oggi per avere il Vostro preventivo Gratuito! Insieme ad esso avrete il Vostro Progetto Virtuale, anch''esso completamente gratuito e sviluppato su un''immagine del luogo ove si svolgerà l''Evento. Potrete cambiare in corso d''opera la tipologia di fiori, il colore, o la quantità delle decorazioni floreali commissionate, avendo così un''idea precisa di quale sarà l''effettivo esito delle Vostre scelte.',
  'chiesa/3-saronno-camminata-avalanche-aspidistra-e-tulle.jpg', 1),
@@ -96,11 +112,19 @@ Contattateci oggi per avere il Vostro preventivo Gratuito! Insieme ad esso avret
  'Progetti Virtuali | Il tuo allestimento prima di realizzarlo | Petali e Fiori',
  'Il Progetto Virtuale è gratuito: sviluppiamo la decorazione floreale su una foto del luogo dell''Evento così potete vedere il risultato e valutarne il costo.',
  'Vi mostriamo in anticipo come saranno inserite le decorazioni nel luogo dell''Evento.',
- 'Il Progetto Virtuale è gratuito ed è sviluppato su un''immagine del Luogo del Vostro Evento: una foto della Chiesa, della Sala del Comune o del ristorante dove si svolgerà la cerimonia. La nostra Flower Designer costruisce la decorazione e la presenta grazie alla computer grafica.
+ '## Come nasce il Progetto Virtuale
+
+Il Progetto Virtuale è gratuito ed è sviluppato su un''immagine del Luogo del Vostro Evento: una foto della Chiesa, della Sala del Comune o del ristorante dove si svolgerà la cerimonia. La nostra Flower Designer costruisce la decorazione e la presenta grazie alla computer grafica.
+
+## Un progetto che si adatta a voi
 
 Questo Progetto potrà comodamente essere modificato per meglio rispondere alle Vostre esigenze: potrete decidere di variare il numero di composizioni floreali da realizzare, o la tipologia e il colore dei fiori da usare, valutando visivamente e con facilità il risultato delle Vostre scelte.
 
+## Tenete sotto controllo il budget
+
 In questo modo valutate anche il costo: potete scegliere dove aumentare e dove diminuire il numero delle decorazioni, tenendo sempre il controllo del budget. Potrete scegliere ogni dettaglio del Vostro progetto, i colori, le forme, le tipologie di fiori e di verdi da usare, realizzando così il matrimonio che avete sempre sognato.
+
+## Anche per meeting e ricevimenti
 
 Il servizio vale anche per gli allestimenti per meeting e ricevimenti: la Vostra azienda potrà visualizzare in anticipo il risultato finale all''interno del luogo in cui si svolgerà l''Evento e richiedere modifiche al progetto.',
  'chiesa/1-saronno-progetto-in-rosa-e-viola-mezzelune.jpg', 1),
@@ -118,13 +142,23 @@ INSERT INTO `services`
 VALUES
 ('chiesa', 'Chiesa',
  'Ogni Chiesa ha uno stile architettonico che la decorazione floreale deve rispettare, con un progetto virtuale costruito sulle foto del luogo.',
- 'Il matrimonio in Chiesa è il sogno di molte coppie. Il momento del sì è un momento Sacro, e la scelta del Luogo ove pronunciare la Promessa d''Amore è molto importante per gli Sposi.
+ '## Un momento sacro
+
+Il matrimonio in Chiesa è il sogno di molte coppie. Il momento del sì è un momento Sacro, e la scelta del Luogo ove pronunciare la Promessa d''Amore è molto importante per gli Sposi.
+
+## Lo stile della Chiesa
 
 Ogni Chiesa ha un suo preciso stile architettonico, che andrà assolutamente rispettato nel momento della scelta delle Decorazioni Floreali. Se la Chiesa è di tipo rinascimentale sarà bene scegliere una decorazione che armonizzi con l''atmosfera classica e raccolta della stessa, in stile decorativo romantico. In caso di costruzioni moderne è invece meglio orientarsi verso uno stile più contemporaneo per le Decorazioni Floreali, come una decorazione a blocchi o con andamento lineare.
 
+## Armonia con il luogo e con l''abito
+
 Queste decisioni vanno prese in fase progettuale, poiché le Decorazioni Floreali devono essere armoniche rispetto all''aspetto della Chiesa nel suo complesso, oltre che tra loro stesse e con il Bouquet della Sposa. Il Bouquet stesso deve anche essere coordinato all''abito della Sposa.
 
+## Il Progetto Virtuale
+
 In fase progettuale noi svilupperemo un progetto virtuale delle Vostre Decorazioni Floreali sulle fotografie del Luogo dove si svolgerà l''evento. Questo Progetto Virtuale potrà comodamente essere modificato per meglio rispondere alle Vostre esigenze: potrete decidere di variare il numero di composizioni floreali da realizzare, o la tipologia e il colore dei fiori da usare, valutando visivamente e con facilità il risultato delle Vostre scelte. Questo Vi consentirà anche di effettuare una valutazione consapevole rispetto al costo delle composizioni, ed eventualmente di scegliere dove andare a aumentarne il numero e dove andare a diminuirlo.
+
+## Un matrimonio su misura
 
 Il Vostro matrimonio merita una progettazione accurata e personalizzata; la possibilità che noi Vi offriamo di sceglierne ogni dettaglio Vi renderà partecipi di tutte le fasi della sua preparazione e questo lo renderà veramente unico e irripetibile.',
  'chiesa/2-saronno-pogetto-in-bianco-e-verde.jpg', 'matrimonio', 1, 1),
@@ -133,73 +167,125 @@ Il Vostro matrimonio merita una progettazione accurata e personalizzata; la poss
  'Anche la Sala dei matrimoni del Comune si addobba come una Chiesa, con un Progetto Virtuale sviluppato sulla foto della Sala.',
  'Oggi moltissime coppie decidono di Sposarsi esclusivamente in Comune. Sposarsi in Comune non vuol dire necessariamente rinunciare a farlo in una cornice scenografica di gusto, con una splendida e indimenticabile Decorazione Floreale.
 
+## Un Matrimonio pieno di fiori
+
 Non è necessario abbandonare il Vostro lato romantico; la nostra progettazione floreale potrà aiutarvi a realizzare il Vostro sogno di un Matrimonio pieno di fiori e colori, anche nel contesto del Comune più minimalista.
 
+## La sala dei matrimoni
+
 In ogni Comune c''è una Sala dedicata ai matrimoni e questa può venire addobbata esattamente come succede per le Chiese; con fiori, nastri, tulle e tutto ciò che gli Sposi desiderino per rendere unico ed inimitabile il loro Matrimonio.
+
+## Il Progetto Virtuale
 
 Noi possiamo realizzare, esattamente come accade per i matrimoni celebrati in Chiesa, un Progetto Virtuale della scenografia floreale del Vostro Matrimonio, sviluppato su una foto della Sala ove vi sposerete. In questo modo sarà facile per Voi valutare l''impatto della scelta dei fiori, dei colori e delle tipologie delle Decorazioni nel Luogo dell''Evento, ed eventualmente decidere di variare il Progetto. I Progetti Virtuali hanno appunto la caratteristica di facilitarVi nella scelta di ciò che sia a Voi più confacente, non solo per forme e colori ma anche rispetto al costo.',
  'comune/1-comune-di-melegnano-progetto-bianco-rosa-sfere.jpg', 'matrimonio', 2, 1),
 
 ('bouquet', 'Bouquet',
  'Il centro della Decorazione Floreale: bouquet decorativi e formali studiati insieme alla Sposa, da 90 euro fino a 300 euro.',
- 'Il Bouquet è il sogno segreto di ogni donna: tutte le Spose sognano di averne uno creato con i loro fiori preferiti. È il vero centro della Decorazione Floreale; spesso le Spose decidono che tipo di fiori e di Bouquet vogliono prima ancora di sapere come sarà l''abito.
+ '## Il cuore della Decorazione Floreale
+
+Il Bouquet è il sogno segreto di ogni donna: tutte le Spose sognano di averne uno creato con i loro fiori preferiti. È il vero centro della Decorazione Floreale; spesso le Spose decidono che tipo di fiori e di Bouquet vogliono prima ancora di sapere come sarà l''abito.
+
+## Colori, forme e carattere
 
 La meraviglia dei fiori e dei colori, la loro magia, rende incantevole l''abito più sontuoso, dona un dettaglio estroso e personale al Matrimonio più tradizionale. I colori e le forme dei fiori vanno accostati con cura, tenendo conto dello Stile della cerimonia e soprattutto del carattere e della volontà della Sposa. In questo i Nostri Bouquet sono davvero unici; essendo studiati insieme alle Spose rendono realtà ciò che Voi avete sempre sognato per il Vostro matrimonio.
 
+## Bouquet e abito
+
 Per decidere quale Bouquet sia più adatto bisogna tenere conto della tipologia e della forma dell''abito della Sposa; un abito molto vaporoso in stile romantico si addice tendenzialmente di più a un Bouquet in stile Decorativo e cascante, piuttosto che ad un Bouquet in stile Formale. Ogni situazione esige un particolare tipo di Bouquet; l''ideale sarebbe che esso armonizzi alla perfezione sia con l''abito che con la scenografia floreale, la quale deve essere in armonia con il luogo dove si svolge l''Evento.
 
+## Come si porta il Bouquet
+
 Il Bouquet si porta nella mano sinistra; la mano destra deve essere appoggiata al braccio del padre della Sposa, o di chi la accompagna. Il Bouquet non va tenuto in braccio, ma impugnato con delicatezza tenendolo con la mano sinistra e, se è di tipo decorativo, il lato ricadente va tenuto sulla sinistra dell''abito.
+
+## Prezzi dei Bouquet
 
 I Nostri Bouquet Decorativi partono da un prezzo di 90 euro per arrivare ad un massimo di 300 euro, mentre i Bouquet Formali partono da 90 euro per arrivare ad un massimo di 250 euro. Naturalmente il costo è influenzato dalla scelta della tipologia di fiori; ad esempio se si sceglie di utilizzare delle orchidee il prezzo tenderà ad essere alto, rispetto ad un utilizzo di una rosa comune.',
  'bouquet/bouquetdecorativo.jpg', 'matrimonio', 3, 1),
 
 ('decorazioni-varie', 'Decorazioni Varie',
  'Dodici tipologie di Decorazioni Floreali, dalla più classica alla più moderna, per Chiesa, Comune, ristorante e casa degli Sposi.',
- 'Per ogni Matrimonio bisogna fare delle scelte: scegliere che tipo di fiore usare, quali colori e quali forme siano più adatte alla cerimonia, cosa sia più rappresentativo dei desideri degli Sposi.
+ '## Le scelte del Matrimonio
+
+Per ogni Matrimonio bisogna fare delle scelte: scegliere che tipo di fiore usare, quali colori e quali forme siano più adatte alla cerimonia, cosa sia più rappresentativo dei desideri degli Sposi.
+
+## Dove si addobbano
 
 Vi mostriamo alcune tipologie di Decorazioni Floreali, come esempio delle molte possibili forme che possiamo realizzare: abbastanza tipica è la scelta di addobbare con i fiori anche la casa della Sposa e dello Sposo, in vista delle foto con l''abito e con gli invitati, oltre alla Chiesa o al Comune. Spesso si usa decorare la porta o le scale da cui la Sposa uscirà, salutata dai parenti e dagli amici. Le Decorazioni Floreali qui proposte sono perfette per questo tipo di necessità; possono essere ideali anche nelle case dei genitori degli Sposi.
+
+## In armonia con il Bouquet
 
 Non è necessario che le Decorazioni siano identiche a quelle scelte per la Chiesa, purché riprendano gli stessi fiori usati nel Bouquet della Sposa.',
  'decorazioni/decorativa.jpg', 'matrimonio', 4, 1),
 
 ('retromacchina', 'Retromacchina',
  'Il fiore sul lunotto della macchina degli Sposi, con gli stessi fiori della Chiesa e del Bouquet, riutilizzabile anche sul tavolo del ristorante.',
- 'Il retromacchina è la tipica Decorazione Floreale che viene posizionata nel lunotto posteriore della macchina degli Sposi, sulla cappelliera. Si compone degli stessi fiori presenti in Chiesa e nel Bouquet, e va studiato nella forma e nella dimensione a seconda delle dimensioni della macchina scelta dagli Sposi.
+ '## Sul lunotto degli Sposi
+
+Il retromacchina è la tipica Decorazione Floreale che viene posizionata nel lunotto posteriore della macchina degli Sposi, sulla cappelliera. Si compone degli stessi fiori presenti in Chiesa e nel Bouquet, e va studiato nella forma e nella dimensione a seconda delle dimensioni della macchina scelta dagli Sposi.
+
+## Anche al ristorante
 
 E'' possibile realizzare retromacchina di tutti i tipi e colori, seguendo i desideri degli Sposi. Frequentemente il retromacchina viene utilizzato anche come Decorazione al ristorante, posizionato sulla tavola degli Sposi: se si intende farne anche quest''uso bisogna progettare in anticipo una forma e una scelta di fiori che a tavola non disturbino, ad esempio non si possono usare i gigli più comuni, perché hanno un odore molto forte.
+
+## Altre possibilità
 
 Oggi ci sono anche altre possibilità di Decorazione Floreale della vettura: esistono spugne contenitive predisposte per essere fissate sulla carrozzeria dell''auto, sagomate in diverse forme come cuore o fedi incrociate, che si abbinano molto bene al classico retromacchina. Per contenere i costi si può pensare di utilizzare in alternativa dei nastri di tulle per decorare la parte anteriore della macchina.',
  'retromacchina/retromacchina.jpg', 'matrimonio', 5, 1),
 
 ('bottoniere', 'Bottoniere',
  'Il fiore per l''occhiello dello Sposo, realizzato con i fiori del Bouquet, e per tradizione anche per Testimoni e genitori.',
- 'La Bottoniera è il fiore che si posiziona sull''occhiello dello Sposo, poco sotto l''altezza del fazzoletto. Spesso si preferisce metterla in alternativa ad esso, ma non è una regola fissa.
+ '## Sull''occhiello dello Sposo
+
+La Bottoniera è il fiore che si posiziona sull''occhiello dello Sposo, poco sotto l''altezza del fazzoletto. Spesso si preferisce metterla in alternativa ad esso, ma non è una regola fissa.
+
+## Come si compone
 
 E'' un dettaglio irrinunciabile nel giorno delle Vostre Nozze; nelle fotografie risalterà piacevolmente, dandovi una nota di colore e di classe. Solitamente per la composizione della Bottoniera si usa il fiore principale presente nel Bouquet della Sposa; se ne usa uno composto con alcuni verdi e qualche fiore secondario come un rametto di gipsophyla, il velo da Sposa.
+
+## Testimoni e genitori
 
 Anche i Testimoni degli Sposi e i genitori di entrambi, per tradizione, hanno una Bottoniera; sarà più piccola di quella dello Sposo, e può essere fatta con un fiore diverso, purché tra quelli presenti nel Bouquet della Sposa.',
  NULL, 'matrimonio', 6, 1),
 
 ('centrotavola', 'Centrotavola',
  'Ciò che gli invitati hanno di fronte per tutto il Banchetto: equilibrato, armonico e sempre in sintonia con il Bouquet della Sposa.',
- 'Il centrotavola è ciò che gli invitati avranno di fronte per tutto il Banchetto di Nozze. Per questo motivo la sua composizione floreale deve essere particolarmente equilibrata ed armonica.
+ '## Il fulcro del Banchetto
+
+Il centrotavola è ciò che gli invitati avranno di fronte per tutto il Banchetto di Nozze. Per questo motivo la sua composizione floreale deve essere particolarmente equilibrata ed armonica.
+
+## In sintonia con il Bouquet
 
 Il fiore principale deve sempre rimandare al Bouquet della Sposa; se la Sposa ha scelto un fiore molto costoso, si può optare per qualcosa che ne ricordi forma e colore. Sono particolarmente belli ed armoniosi i centrotavola composti come piccoli pezzetti di natura sul tavolo; questo effetto è dato da un sapiente accostamento dei fiori e dei verdi, fino ad ottenere l''effetto di grazia voluto. Fondamentale in ogni caso è che essi risultino eleganti e adatti al contesto e ai colori della tovaglia e del ristorante.
 
+## Le candele
+
 Molti desiderano una candela nel proprio centrotavola; è l''ideale nel caso il Banchetto di Nozze si tenga la sera, la magia romantica delle candele non verrà facilmente dimenticata dai vostri invitati. Per contenere i costi si possono abbinare centrotavola, con o senza candele, a candele rotonde decorate con verdi e petali o piccoli fiori da posizionare romanticamente anche sulla tavola.
+
+## Un esempio di prezzo
 
 Un allestimento in un ristorante, con decorazioni dei tavoli, centrotavola e candele, più due grossi vasi di bambù con aspidistra e fiori, è costato 649 euro; eliminando queste due decorazioni floreali il prezzo sarebbe stato di 499 euro, installazione e consegna incluse.',
  'centrotavola/composizionefoto.jpg', 'matrimonio', 7, 1),
 
 ('meeting', 'Allestimenti per Meeting',
  'Addobbi floreali per meeting aziendali, eventi culturali, alberghi e ristoranti, coerenti con lo stile dell''Organizzazione.',
- 'Naturalmente anche per gli Addobbi Floreali necessari ad un meeting aziendale, o a un Evento culturale, è necessario studiare una soluzione ad hoc. Va ricercato un effetto scenografico che sia adeguato all''occasione e coerente con lo Stile adottato dall''Organizzazione nel suo complesso.
+ '## Uno stile su misura
+
+Naturalmente anche per gli Addobbi Floreali necessari ad un meeting aziendale, o a un Evento culturale, è necessario studiare una soluzione ad hoc. Va ricercato un effetto scenografico che sia adeguato all''occasione e coerente con lo Stile adottato dall''Organizzazione nel suo complesso.
+
+## Alberghi e ristoranti
 
 Le stesse considerazioni vanno fatte per la progettazione da svilupparsi in un dato Albergo o Ristorante; i nostri Flower Designer terranno conto dell''ambientazione, dello stile del luogo, dei colori presenti, dell''arredamento e del tipo di Evento che vi si svolgerà.
 
+## Un esempio reale
+
 Un allestimento floreale realizzato in occasione di un Evento presso un locale di Milano, comprensivo delle Decorazioni da tavolo con centrotavola e candele con verdi, dell''addobbo dei due vasi di bambù presenti nel locale e della consegna e installazione in loco la mattina dell''Evento, ha avuto un costo di 649 euro.
 
+## Il Progetto Virtuale
+
 Se la Vostra azienda lo desidera, i Progetti Vi saranno presentati prima della loro realizzazione grazie alla computer grafica; potrete agevolmente visualizzare quale sarà il risultato finale all''interno del luogo in cui si svolgerà l''Evento e richiedere eventuali modifiche, valutando anche in anticipo l''impatto economico delle scelte da Voi effettuate.
+
+## Fiori artificiali e secchi
 
 Offriamo inoltre un altro interessante servizio: ci occupiamo di rivedere e sistemare eventuali Decorazioni con fiori artificiali o simili già presenti presso il Vostro spazio. Vi consente di avere un notevole risparmio economico e, spesso, un grande risultato estetico e di rappresentanza. In caso Vi occorra un restauro di Vostri addobbi artificiali o in fiori secchi saremo lieti di valutare quale sarebbe la scelta migliore per il Vostro caso specifico e fornirVi gratuitamente un preventivo di quanto Vi costerebbe l''intervento.',
  'meeting/sala-tavoli-1.jpg', 'servizio', 8, 1);

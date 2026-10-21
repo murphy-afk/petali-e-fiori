@@ -500,6 +500,20 @@ Deliverables: gallery with all categorized photos, working form storing messages
 Acceptance: filter and lightbox work with keyboard, a submitted message appears in
 contact_messages.
 
+Status: complete. The gallery filter narrows the grid from the list already in memory, the
+lightbox opens on the filtered set, closes on Escape and returns focus to the photo that opened
+it, and a category with no photos shows a friendly note instead of an empty grid. The home hero
+rotates through the seeded photos with pause on hover, pause on focus and a pause/play button,
+and it never starts on its own under prefers-reduced-motion while the manual arrows keep
+working. To give the sticky table of contents something to link to, 43 section headings were
+added to the long page copy in the seed, so those pages now build anchored sections behind a TOC
+that highlights the section in view. The contact form and its inline confirmation were already
+in place from the earlier sessions. Checked in headless Edge: filter, lightbox keyboard and
+focus behaviour, slideshow pause and dots, TOC anchor links, single H1 per page, no horizontal
+scroll at 375 px and no console errors across 5 routes; the server tests confirm a valid message
+is stored in contact_messages while the honeypot, invalid payloads and the rate limit are
+refused.
+
 ### Session 6: SEO, performance, accessibility and launch
 
 Goal: production readiness.

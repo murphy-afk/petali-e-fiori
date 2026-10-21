@@ -1,13 +1,11 @@
-.gallery__counts {
+.gallery__filters {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-3);
   margin: 0 0 var(--space-6);
-  padding: 0;
-  list-style: none;
 }
 
-.gallery__count {
+.gallery__filter {
   display: flex;
   align-items: baseline;
   gap: var(--space-2);
@@ -15,16 +13,30 @@
   background-color: var(--surface-band);
   border: 1px solid var(--border-soft);
   border-radius: 999px;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
 }
 
-.gallery__count-name {
+.gallery__filter:hover {
+  background-color: var(--action-ghost-bg-hover);
+  border-color: var(--border-strong);
+}
+
+.gallery__filter--active {
+  background-color: var(--surface-accent);
+  border-color: var(--border-strong);
+}
+
+.gallery__filter-name {
   color: var(--text-on-band);
   font-size: var(--text-sm);
   font-weight: var(--weight-semibold);
-  text-transform: capitalize;
 }
 
-.gallery__count-value {
+.gallery__filter--active .gallery__filter-name {
+  color: var(--text-accent);
+}
+
+.gallery__filter-count {
   color: var(--text-muted);
   font-size: var(--text-xs);
 }
