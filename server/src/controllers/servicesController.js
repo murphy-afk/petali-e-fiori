@@ -3,7 +3,7 @@ import { httpError } from "../middleware/httpError.js";
 
 export async function listServices(req, res) {
   const services = await query(
-    "SELECT id, slug, name, summary, hero_image, menu_group, sort_order, updated_at " +
+    "SELECT id, slug, name, summary, hero_image, hero_images, menu_group, sort_order, updated_at " +
       "FROM services WHERE published = 1 ORDER BY menu_group, sort_order, id"
   );
   res.json({ services });

@@ -106,7 +106,7 @@ and errors answer `{ "error": "message" }`.
 | GET | /api/pages | Published pages without the long body |
 | GET | /api/pages/:slug | One page with intro, body, meta title and meta description |
 | GET | /api/services | Published services ordered by menu group |
-| GET | /api/services/:slug | One service with the full body |
+| GET | /api/services/:slug | One service with the full body and its hero photos |
 | GET | /api/bouquets | Bouquet models with price ranges, optional ?style=decorativo |
 | GET | /api/decorations | The decoration types with description and best use |
 | GET | /api/price-examples | Real price examples, items come back as an array |
@@ -116,9 +116,11 @@ and errors answer `{ "error": "message" }`.
 | GET | /sitemap.xml | XML sitemap built from the published routes |
 | GET | /robots.txt | Robots file pointing at the sitemap |
 
-Image paths inside the payloads (hero_image, image, file) are relative to the /images prefix
-that the client serves from client/public/images, so `bouquet/bouquet-degas.jpg` is displayed
-as /images/bouquet/bouquet-degas.jpg.
+Image paths inside the payloads (hero_image, image, file and the src of each hero_images entry)
+are relative to the /images prefix that the client serves from client/public/images, so
+`bouquet/bouquet-degas.jpg` is displayed as /images/bouquet/bouquet-degas.jpg. A service keeps
+one hero_image for the home cards and an optional hero_images list of {src, alt} objects that
+the page renders as a four photo collage.
 
 ### POST /api/contact
 

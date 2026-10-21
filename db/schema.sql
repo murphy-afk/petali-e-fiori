@@ -47,6 +47,9 @@ CREATE TABLE IF NOT EXISTS `services` (
   `summary` VARCHAR(255) NOT NULL,
   `body` MEDIUMTEXT NULL,
   `hero_image` VARCHAR(255) NULL,
+  -- Hero shown as a four photo collage, a JSON array of {"src", "alt"}
+  -- objects; NULL keeps the single hero_image.
+  `hero_images` JSON NULL,
   `menu_group` VARCHAR(40) NOT NULL DEFAULT 'matrimonio',
   `sort_order` SMALLINT UNSIGNED NOT NULL DEFAULT 0,
   `published` TINYINT(1) NOT NULL DEFAULT 1,

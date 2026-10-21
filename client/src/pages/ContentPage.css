@@ -10,6 +10,26 @@
   box-shadow: var(--shadow-soft);
 }
 
+/* Collage hero: the four photos sit side by side, two per row on a phone and
+   one row of four from the tablet up, each cropped to the same ratio so the
+   grid never jumps while the photos load. */
+.content-page__hero--collage {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.content-page__hero--collage .content-page__hero-image {
+  aspect-ratio: 1 / 1;
+}
+
+@media (min-width: 768px) {
+  .content-page__hero--collage {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-4);
+  }
+}
+
 .content-page__layout {
   display: grid;
   gap: var(--space-7);

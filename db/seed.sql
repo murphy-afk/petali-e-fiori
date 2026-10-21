@@ -138,7 +138,7 @@ Il servizio vale anche per gli allestimenti per meeting e ricevimenti: la Vostra
 
 -- ----------------------------------------------------------------- services
 INSERT INTO `services`
-  (`slug`, `name`, `summary`, `body`, `hero_image`, `menu_group`, `sort_order`, `published`)
+  (`slug`, `name`, `summary`, `body`, `hero_image`, `hero_images`, `menu_group`, `sort_order`, `published`)
 VALUES
 ('chiesa', 'Chiesa',
  'Ogni Chiesa ha uno stile architettonico che la decorazione floreale deve rispettare, con un progetto virtuale costruito sulle foto del luogo.',
@@ -161,7 +161,7 @@ In fase progettuale noi svilupperemo un progetto virtuale delle Vostre Decorazio
 ## Un matrimonio su misura
 
 Il Vostro matrimonio merita una progettazione accurata e personalizzata; la possibilità che noi Vi offriamo di sceglierne ogni dettaglio Vi renderà partecipi di tutte le fasi della sua preparazione e questo lo renderà veramente unico e irripetibile.',
- 'chiesa/2-saronno-pogetto-in-bianco-e-verde.jpg', 'matrimonio', 1, 1),
+ 'chiesa/2-saronno-pogetto-in-bianco-e-verde.jpg', NULL, 'matrimonio', 1, 1),
 
 ('comune', 'Comune',
  'Anche la Sala dei matrimoni del Comune si addobba come una Chiesa, con un Progetto Virtuale sviluppato sulla foto della Sala.',
@@ -178,7 +178,7 @@ In ogni Comune c''è una Sala dedicata ai matrimoni e questa può venire addobba
 ## Il Progetto Virtuale
 
 Noi possiamo realizzare, esattamente come accade per i matrimoni celebrati in Chiesa, un Progetto Virtuale della scenografia floreale del Vostro Matrimonio, sviluppato su una foto della Sala ove vi sposerete. In questo modo sarà facile per Voi valutare l''impatto della scelta dei fiori, dei colori e delle tipologie delle Decorazioni nel Luogo dell''Evento, ed eventualmente decidere di variare il Progetto. I Progetti Virtuali hanno appunto la caratteristica di facilitarVi nella scelta di ciò che sia a Voi più confacente, non solo per forme e colori ma anche rispetto al costo.',
- 'comune/1-comune-di-melegnano-progetto-bianco-rosa-sfere.jpg', 'matrimonio', 2, 1),
+ 'comune/1-comune-di-melegnano-progetto-bianco-rosa-sfere.jpg', NULL, 'matrimonio', 2, 1),
 
 ('bouquet', 'Bouquet',
  'Il centro della Decorazione Floreale: bouquet decorativi e formali studiati insieme alla Sposa, da 90 euro fino a 300 euro.',
@@ -201,7 +201,9 @@ Il Bouquet si porta nella mano sinistra; la mano destra deve essere appoggiata a
 ## Prezzi dei Bouquet
 
 I Nostri Bouquet Decorativi partono da un prezzo di 90 euro per arrivare ad un massimo di 300 euro, mentre i Bouquet Formali partono da 90 euro per arrivare ad un massimo di 250 euro. Naturalmente il costo è influenzato dalla scelta della tipologia di fiori; ad esempio se si sceglie di utilizzare delle orchidee il prezzo tenderà ad essere alto, rispetto ad un utilizzo di una rosa comune.',
- 'bouquet/bouquetdecorativo.jpg', 'matrimonio', 3, 1),
+ 'chiesa/10-bouquet-appoggiato-altare.jpg',
+ '[{"src":"chiesa/10-bouquet-appoggiato-altare.jpg","alt":"Dettaglio del Bouquet Tiziano appoggiato sull''altare"}]',
+ 'matrimonio', 3, 1),
 
 ('decorazioni-varie', 'Decorazioni Varie',
  'Dodici tipologie di Decorazioni Floreali, dalla più classica alla più moderna, per Chiesa, Comune, ristorante e casa degli Sposi.',
@@ -216,7 +218,9 @@ Vi mostriamo alcune tipologie di Decorazioni Floreali, come esempio delle molte 
 ## In armonia con il Bouquet
 
 Non è necessario che le Decorazioni siano identiche a quelle scelte per la Chiesa, purché riprendano gli stessi fiori usati nel Bouquet della Sposa.',
- 'decorazioni/decorativa.jpg', 'matrimonio', 4, 1),
+ 'decorazioni/decorativa.jpg',
+ '[{"src":"decorazioni/decorativa.jpg","alt":"Composizione floreale decorativa"},{"src":"decorazioni/mezzaluna.jpg","alt":"Decorazione floreale a mezzaluna"},{"src":"decorazioni/valorizzazione-fiore.jpg","alt":"Composizione che valorizza il fiore singolo"},{"src":"decorazioni/lineare-a-s.jpg","alt":"Decorazione floreale dal profilo lineare a S"}]',
+ 'matrimonio', 4, 1),
 
 ('retromacchina', 'Retromacchina',
  'Il fiore sul lunotto della macchina degli Sposi, con gli stessi fiori della Chiesa e del Bouquet, riutilizzabile anche sul tavolo del ristorante.',
@@ -231,7 +235,9 @@ E'' possibile realizzare retromacchina di tutti i tipi e colori, seguendo i desi
 ## Altre possibilità
 
 Oggi ci sono anche altre possibilità di Decorazione Floreale della vettura: esistono spugne contenitive predisposte per essere fissate sulla carrozzeria dell''auto, sagomate in diverse forme come cuore o fedi incrociate, che si abbinano molto bene al classico retromacchina. Per contenere i costi si può pensare di utilizzare in alternativa dei nastri di tulle per decorare la parte anteriore della macchina.',
- 'retromacchina/retromacchina.jpg', 'matrimonio', 5, 1),
+ 'retromacchina/retromacchina.jpg',
+ '[{"src":"retromacchina/retromacchina.jpg","alt":"Retromacchina con fiori gialli e arancioni"},{"src":"chiesa/e-sposi-lancio-riso-bouquet-decorazioni-esterne.jpg","alt":"Sposi durante il lancio del riso con bouquet e decorazioni esterne"},{"src":"chiesa/g-sposi-esterno-bouquet-rose-akito.jpg","alt":"Sposi in uscita dalla chiesa con bouquet di rose Akito"},{"src":"chiesa/i-sposa-con-bouquet.jpg","alt":"Sposa con bouquet Manet"}]',
+ 'matrimonio', 5, 1),
 
 ('bottoniere', 'Bottoniere',
  'Il fiore per l''occhiello dello Sposo, realizzato con i fiori del Bouquet, e per tradizione anche per Testimoni e genitori.',
@@ -246,7 +252,7 @@ E'' un dettaglio irrinunciabile nel giorno delle Vostre Nozze; nelle fotografie 
 ## Testimoni e genitori
 
 Anche i Testimoni degli Sposi e i genitori di entrambi, per tradizione, hanno una Bottoniera; sarà più piccola di quella dello Sposo, e può essere fatta con un fiore diverso, purché tra quelli presenti nel Bouquet della Sposa.',
- NULL, 'matrimonio', 6, 1),
+ NULL, NULL, 'matrimonio', 6, 1),
 
 ('centrotavola', 'Centrotavola',
  'Ciò che gli invitati hanno di fronte per tutto il Banchetto: equilibrato, armonico e sempre in sintonia con il Bouquet della Sposa.',
@@ -265,7 +271,7 @@ Molti desiderano una candela nel proprio centrotavola; è l''ideale nel caso il 
 ## Un esempio di prezzo
 
 Un allestimento in un ristorante, con decorazioni dei tavoli, centrotavola e candele, più due grossi vasi di bambù con aspidistra e fiori, è costato 649 euro; eliminando queste due decorazioni floreali il prezzo sarebbe stato di 499 euro, installazione e consegna incluse.',
- 'centrotavola/composizionefoto.jpg', 'matrimonio', 7, 1),
+ 'centrotavola/composizionefoto.jpg', NULL, 'matrimonio', 7, 1),
 
 ('meeting', 'Allestimenti per Meeting',
  'Addobbi floreali per meeting aziendali, eventi culturali, alberghi e ristoranti, coerenti con lo stile dell''Organizzazione.',
@@ -288,7 +294,7 @@ Se la Vostra azienda lo desidera, i Progetti Vi saranno presentati prima della l
 ## Fiori artificiali e secchi
 
 Offriamo inoltre un altro interessante servizio: ci occupiamo di rivedere e sistemare eventuali Decorazioni con fiori artificiali o simili già presenti presso il Vostro spazio. Vi consente di avere un notevole risparmio economico e, spesso, un grande risultato estetico e di rappresentanza. In caso Vi occorra un restauro di Vostri addobbi artificiali o in fiori secchi saremo lieti di valutare quale sarebbe la scelta migliore per il Vostro caso specifico e fornirVi gratuitamente un preventivo di quanto Vi costerebbe l''intervento.',
- 'meeting/sala-tavoli-1.jpg', 'servizio', 8, 1);
+ 'meeting/sala-tavoli-1.jpg', NULL, 'servizio', 8, 1);
 
 -- ----------------------------------------------------------------- bouquets
 INSERT INTO `bouquets`

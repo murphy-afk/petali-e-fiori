@@ -53,7 +53,13 @@ export default function ServicePage({ slug }) {
         </p>
       ) : null}
 
-      {service ? <ContentPage title={service.name} body={service.body} heroImage={service.hero_image} /> : null}
+      {service ? (
+        <ContentPage
+          title={service.name}
+          body={service.body}
+          heroImage={service.hero_image}
+          heroImages={service.hero_images} />
+      ) : null}
 
       {extra}
 

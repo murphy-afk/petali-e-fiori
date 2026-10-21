@@ -4,19 +4,43 @@ import { useSettings } from "../context/SettingsContext.jsx";
 import { imageUrl, splitSections } from "../utils/text.js";
 import "./ContentPage.css";
 
-// Body of a content page: optional hero photo, the long text split into
-// sections with their headings, a table of contents and a sticky quote card
-// on wide screens. ServicePage and StaticPage both render it under their own
-// PageHeader.
-export default function ContentPage({ title, body, heroImage, children }) {
+// Body of a content page: optional hero photo or four photo collage, the long
+// text split into sections with their headings, a table of contents and a
+// sticky quote card on wide screens. ServicePage and StaticPage both render it
+// under their own PageHeader.
+export default function ContentPage({ title, body, heroImage, heroImages, children }) {
   const { settings } = useSettings();
   const { intro, sections } = splitSections(body);
 
+  // hero_images is the JSON list of {"src", "alt"} objects stored on the
+  // service, used when one photo is not enough; the single hero_image stays
+  // the fallback and also carries the alt text of a one photo hero.
+  const images =
+    Array.isArray(heroImages) && heroImages.length > 0
+      ? heroImages.filter((image) => image && image.src)
+      : heroImage
+        ? [{ src: heroImage, alt: title }]
+        : [];
+  const isCollage = images.length > 1;
+
   return (
     <>
-      {heroImage ? (
-        <div className="container content-page__hero">
-          <img className="content-page__hero-image" src={imageUrl(heroImage)} alt={title} />
+      {images.length > 0 ? (
+        <div
+          className={
+            isCollage
+              ? "container content-page__hero content-page__hero--collage"
+              : "container content-page__hero"
+          }>
+          {images.map((image, index) => (
+            <img
+              key={image.src}
+              className="content-page__hero-image"
+              src={imageUrl(image.src)}
+              alt={image.alt || title}
+              loading={index === 0 ? "eager" : "lazy"}
+            />
+          ))}
         </div>
       ) : null}
 
