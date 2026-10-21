@@ -6,8 +6,14 @@ import react from "@vitejs/plugin-react";
 // Express serves the built files.
 const apiTarget = process.env.VITE_API_TARGET || "http://localhost:3001";
 
+// Base path of the built site. It stays at the root for the normal build and
+// for Express, and scripts/preview.mjs passes the subfolder of a static host
+// that lives inside one, such as a GitHub Pages project site.
+const base = process.env.VITE_BASE || "/";
+
 export default defineConfig({
   plugins: [react()],
+  base,
   server: {
     port: 5173,
     strictPort: true,

@@ -49,7 +49,7 @@ export default function HomePage() {
           </div>
           <figure className="hero__media">
             <img
-              src="/images/home/bouquet-manet.jpg"
+              src={imageUrl("home/bouquet-manet.jpg")}
               alt="Bouquet Manet, modello decorativo di Petali e Fiori" />
           </figure>
         </div>

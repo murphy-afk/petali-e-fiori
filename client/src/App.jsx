@@ -10,6 +10,11 @@ import GalleryPage from "./pages/GalleryPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage.jsx";
 import { pageRoutes, serviceRoutes } from "./routes.js";
 
+// Base path of the site, "/" at the root of a domain and "/repo/" inside a
+// subfolder such as a GitHub Pages project site. The router needs it without
+// the trailing slash, and an empty string at the root.
+const BASENAME = import.meta.env.BASE_URL.replace(/\/+$/, "");
+
 // The browser keeps the scroll position between two routes, every navigation
 // here starts again from the top of the new page.
 function ScrollToTop() {
@@ -25,7 +30,7 @@ function ScrollToTop() {
 export default function App() {
   return (
     <SettingsProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={BASENAME}>
         <ScrollToTop />
         <div className="site">
           <a className="skip-link" href="#contenuto">Vai al contenuto</a>

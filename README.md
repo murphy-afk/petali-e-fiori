@@ -56,6 +56,25 @@ npm test
 Runs the API acceptance tests in server/test against the local database. Seed first, they
 assert the real content and they remove every contact message they create.
 
+## Preview for a static host
+
+```bash
+npm run build:preview
+npm run build:preview -- --base=/petali-e-fiori/
+```
+
+Builds a copy of the site that runs without Node and without MySQL, for showing the work to
+the client on a host that can only serve files. It needs the API running, because it
+snapshots every answer into client/dist/api-snapshot.json, then builds the client so it
+reads that file instead of calling the API. The output also carries a 404.html that sends
+deep links back into the app, and a robots.txt that asks crawlers to stay away, since this is
+a copy and not the real site.
+
+The contact form does not submit in a preview, it shows the shop email instead. The base
+flag is the subfolder the site lives in, / for a site served at the root of its domain and
+/name-of-the-repository/ for a project site. It only changes the preview: npm run dev and
+npm run build keep calling the API as before.
+
 ## Environment variables
 
 Copy .env.example to .env and adjust it. Values already present in the real process
@@ -64,7 +83,7 @@ environment win over the file.
 | Variable | Default | Purpose |
 | --- | --- | --- |
 | PORT | 3001 | Port of the API |
-| SITE_URL | https://www.petaliefiori.it | Public origin for canonical links, sitemap and Open Graph |
+| SITE_URL | http://localhost:3001 | Public origin for canonical links, sitemap and Open Graph |
 | CLIENT_ORIGIN | http://localhost:5173 | Browser origins allowed to call the API, comma separated |
 | DB_HOST | 127.0.0.1 | MySQL host |
 | DB_PORT | 3306 | MySQL port |

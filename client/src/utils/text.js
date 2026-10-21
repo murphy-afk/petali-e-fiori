@@ -8,9 +8,12 @@ export function splitParagraphs(text) {
     .filter(Boolean);
 }
 
-// Image paths inside the API payloads are relative to /images.
+// Image paths inside the API payloads are relative to the images folder. The
+// base prefix comes from Vite so the same code works at the root of a domain
+// and inside a subfolder such as a GitHub Pages project site.
 export function imageUrl(file) {
   if (!file) return "";
-  if (/^(https?:)?\/\//.test(file) || file.startsWith("/")) return file;
-  return "/images/" + file.replace(/^\/+/, "");
+  if (/^(https?:)?\/\//.test(file)) return file;
+  const base = import.meta.env.BASE_URL || "/";
+  return base + "images/" + file.replace(/^\/+/, "");
 }

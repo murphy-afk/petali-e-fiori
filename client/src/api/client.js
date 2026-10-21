@@ -4,6 +4,29 @@
 
 const API_BASE = import.meta.env.VITE_API_BASE || "";
 
+// Preview builds run on a static host that has no Node and no database, so the
+// answers of the API are captured into one file at build time and read back
+// from here. See scripts/preview.mjs. The flag is absent in every other build,
+// so the branch below is dead code and no request ever changes.
+const IS_SNAPSHOT = import.meta.env.VITE_SNAPSHOT === "1";
+let snapshotPromise = null;
+
+async function loadSnapshot() {
+  if (!snapshotPromise) {
+    snapshotPromise = fetch(import.meta.env.BASE_URL + "api-snapshot.json")
+      .then((response) => {
+        if (!response.ok) throw new Error("snapshot " + response.status);
+        return response.json();
+      })
+      .catch(() => ({}));
+  }
+  return snapshotPromise;
+}
+
+// True when the site runs from the captured answers, the contact form uses it
+// to explain that it cannot send anything from a preview.
+export const isSnapshot = IS_SNAPSHOT;
+
 export class ApiError extends Error {
   constructor(message, status, fields) {
     super(message);
@@ -14,6 +37,15 @@ export class ApiError extends Error {
 }
 
 async function request(path, options) {
+  if (IS_SNAPSHOT) {
+    const snapshot = await loadSnapshot();
+    const payload = snapshot[path];
+    if (payload === undefined) {
+      throw new ApiError("Contenuto non disponibile in questa anteprima.", 404);
+    }
+    return payload;
+  }
+
   let response;
   try {
     response = await fetch(API_BASE + path, {

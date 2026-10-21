@@ -89,7 +89,8 @@
   overflow: hidden;
 }
 
-.contact-form--sent {
+.contact-form--sent,
+.contact-form--preview {
   display: block;
   padding: var(--space-6);
   background-color: var(--surface-band);

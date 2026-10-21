@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { ApiError, api } from "../api/client.js";
+import { ApiError, api, isSnapshot } from "../api/client.js";
 import { useSetting } from "../context/SettingsContext.jsx";
 import Button from "./Button.jsx";
 import "./ContactForm.css";
@@ -53,6 +53,7 @@ function validate(values) {
 // message with an inline panel.
 export default function ContactForm({ className = "" }) {
   const hint = useSetting("contact_hint");
+  const email = useSetting("email");
   const [values, setValues] = useState(EMPTY_VALUES);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState("idle");
@@ -125,6 +126,21 @@ export default function ContactForm({ className = "" }) {
     setErrors({});
     setNotice("");
     setStatus("idle");
+  }
+
+  // A preview runs without a server, so the form cannot send anything. It
+  // explains that instead of letting the visitor fill a form that goes nowhere.
+  if (isSnapshot) {
+    return (
+      <div className={classes + " contact-form--preview"} role="status">
+        <h3 className="contact-form__sent-title">Contattateci direttamente</h3>
+        <p className="contact-form__sent-text">
+          Questa è una copia dimostrativa del sito, il modulo non è collegato. Per scriverci
+          usate l'indirizzo <a href={"mailto:" + email}>{email}</a> oppure chiamate il numero
+          che trovate nella pagina.
+        </p>
+      </div>
+    );
   }
 
   if (status === "success") {
