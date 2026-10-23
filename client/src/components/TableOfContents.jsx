@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import "./TableOfContents.css";
 
-// Sticky list of the section headings of a long page. It watches which
-// section is currently under the header and marks its link as the current
-// one. Pages with a single section do not render it, there is nothing to
-// jump between.
+// List of the section headings of a long page. It watches which section is
+// currently under the header and marks its link as the current one. Pages
+// with a single section do not render it, there is nothing to jump between.
+// ContentPage places it beside the text, sticky, from 1024px up.
 export default function TableOfContents({ sections, title = "In questa pagina" }) {
   const [activeId, setActiveId] = useState(sections.length > 0 ? sections[0].id : null);
   const visible = useRef(new Map());

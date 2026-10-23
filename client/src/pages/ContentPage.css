@@ -30,6 +30,9 @@
   }
 }
 
+/* The page body, the contents list and the quote card share one grid. It
+   stacks on small screens: contents list first, then the text, then the
+   quote card. The three column version lives in the media query below. */
 .content-page__layout {
   display: grid;
   gap: var(--space-7);
@@ -38,6 +41,15 @@
 
 .content-page__body {
   min-width: 0;
+}
+
+/* The heading of the first section starts the column: the top margin it
+   shares with the headings in the middle of the page would drop the whole
+   text below the table of contents beside it. The section already separates
+   the text from the hero photo, so the rail and the first heading start
+   on the same line. */
+.content-page__body > section:first-child > h2 {
+  margin-top: 0;
 }
 
 /* Anchor targets: the sticky header would cover a heading jumped to from
@@ -75,9 +87,29 @@
   font-weight: var(--weight-semibold);
 }
 
+/* From 1024px up the page splits in two: the text takes two thirds of the
+   width and the quote card the last third, both side columns following the
+   reader down the page. */
 @media (min-width: 1024px) {
   .content-page__layout {
     grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr);
+  }
+
+  /* With a table of contents the page becomes three columns: a narrow rail
+     for the contents list on the left, the text in the middle and the quote
+     card on the right. The list owns its column here, so it stays beside the
+     text instead of covering it. The class only exists when the component
+     renders a list, otherwise the text would keep an empty rail next to it. */
+  .content-page__layout--rail {
+    grid-template-columns: minmax(140px, 170px) minmax(0, 2fr) minmax(260px, 1fr);
+    gap: var(--space-6);
+  }
+
+  .content-page__layout--rail > .toc {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-5));
+    align-self: start;
+    margin: 0;
   }
 
   .content-page__aside {
