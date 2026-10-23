@@ -66,9 +66,9 @@ export default function Nav() {
         type="button"
         aria-expanded={open}
         aria-controls="nav-list"
+        aria-label={open ? "Chiudi il menu" : "Apri il menu"}
         onClick={() => setOpen((value) => !value)}>
         <span className="nav__toggle-bars" aria-hidden="true" />
-        <span>Menu</span>
       </button>
 
       <ul id="nav-list" className={open ? "nav__list is-open" : "nav__list"}>
