@@ -1,6 +1,7 @@
 .site-footer {
   background-color: var(--surface-footer);
   color: var(--text-on-footer);
+  border-top: 2px solid var(--border-strong);
 }
 
 .site-footer :focus-visible {
