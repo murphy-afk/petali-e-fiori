@@ -75,6 +75,18 @@ flag is the subfolder the site lives in, / for a site served at the root of its 
 /name-of-the-repository/ for a project site. It only changes the preview: npm run dev and
 npm run build keep calling the API as before.
 
+## GitHub Pages
+
+The `.github/workflows/deploy-pages.yml` workflow builds and deploys the static preview
+when changes reach `main`, or when run manually from GitHub Actions. It starts a temporary
+MySQL 8.4 service, imports the schema and public seed data, snapshots the API, and deploys
+the result to https://murphy-afk.github.io/petali-e-fiori/.
+
+Before the first deployment, open the repository's Settings, then Pages, and set the
+deployment source to GitHub Actions. The Pages copy is still a preview: the contact form
+does not send messages, and its `robots.txt` blocks crawlers. Use the regular Express
+deployment for a live contact form and an indexable production site.
+
 ## Environment variables
 
 Copy .env.example to .env and adjust it. Values already present in the real process
