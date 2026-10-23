@@ -4,8 +4,7 @@ import { useSetting } from "../context/SettingsContext.jsx";
 import { formatItalianDate } from "../utils/format.js";
 import "./Header.css";
 
-// Sticky header: wordmark on the left, text navigation on the right. The live
-// Italian date line of the old site header lives under the wordmark.
+
 export default function Header() {
   const brandName = useSetting("brand_name");
 
@@ -16,7 +15,6 @@ export default function Header() {
           <span className="brand__name">{brandName}</span>
           <span className="brand__tag">
             Flower Designer a Milano
-            <span className="brand__date" aria-hidden="true"> · {formatItalianDate()}</span>
           </span>
         </Link>
         <Nav />
